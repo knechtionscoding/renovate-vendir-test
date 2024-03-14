@@ -14,9 +14,10 @@ directories:
           url: https://aws.github.io/eks-charts
 - path: helm-charts/vendor
   contents:
-    - path: karpenter
-      helmChart:
-        name: karpenter
-        version: 0.32.4
-        repository:
-          url: oci://public.ecr.aws/karpenter/karpenter
+      - path: grafana-operator
+        helmChart:
+          name: grafana-operator
+          version: v5.6.0
+          repository:
+            url: oci://ghcr.io/grafana/helm-charts
+
