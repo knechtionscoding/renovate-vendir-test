@@ -17,6 +17,6 @@ directories:
     - path: karpenter
       helmChart:
         name: karpenter
-        version: 0.35.1
+        version: 0.32.4
         repository:
           url: oci://public.ecr.aws/karpenter/karpenter
