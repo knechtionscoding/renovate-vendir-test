@@ -1,0 +1,22 @@
+apiVersion: vendir.k14s.io/v1alpha1
+kind: Config
+
+minimumRequiredVersion: 0.32.0
+
+directories:
+- path: helm-charts/vendor
+  contents:
+    - path: aws-load-balancer-controller
+      helmChart:
+        name: aws-load-balancer-controller
+        version: 1.5.3
+        repository:
+          url: https://aws.github.io/eks-charts
+- path: helm-charts/vendor
+  contents:
+    - path: karpenter
+      helmChart:
+        name: karpenter
+        version: 0.35.1
+        repository:
+          url: oci://public.ecr.aws/karpenter/karpenter
