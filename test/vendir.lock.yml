@@ -1,0 +1,15 @@
+apiVersion: vendir.k14s.io/v1alpha1
+directories:
+- contents:
+  - helmChart:
+      appVersion: v2.5.2
+      version: 1.5.3
+    path: aws-load-balancer-controller
+  path: helm-charts/vendor
+- contents:
+  - helmChart:
+      appVersion: v5.7.0
+      version: v5.7.0
+    path: grafana-operator
+  path: helm-charts/vendor
+kind: LockConfig
