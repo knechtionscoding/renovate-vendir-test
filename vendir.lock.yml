@@ -5,8 +5,6 @@ directories:
       appVersion: v2.5.2
       version: 1.5.3
     path: aws-load-balancer-controller
-  path: helm-charts/vendor
-- contents:
   - helmChart:
       appVersion: v5.6.0
       version: v5.6.0

@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "grafana-operator.fullname" . }}
-  namespace: {{ include "grafana-operator.namespace" . }}
+  namespace: {{ .Release.Namespace | quote }}
   labels:
     {{- include "grafana-operator.labels" . | nindent 4 }}
     {{- with .Values.additionalLabels }}
