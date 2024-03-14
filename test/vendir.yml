@@ -1,0 +1,22 @@
+apiVersion: vendir.k14s.io/v1alpha1
+kind: Config
+
+minimumRequiredVersion: 0.32.0
+
+directories:
+- path: helm-charts/vendor
+  contents:
+    - path: aws-load-balancer-controller
+      helmChart:
+        name: aws-load-balancer-controller
+        version: 1.5.3
+        repository:
+          url: https://aws.github.io/eks-charts
+- path: helm-charts/vendor
+  contents:
+      - path: grafana-operator
+        helmChart:
+          name: grafana-operator
+          version: v5.7.0
+          repository:
+            url: oci://ghcr.io/grafana/helm-charts
