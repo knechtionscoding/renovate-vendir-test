@@ -9,5 +9,9 @@ directories:
       appVersion: v5.6.0
       version: v5.6.0
     path: grafana-operator
+  - helmChart:
+      appVersion: v1.14.4
+      version: v1.14.4
+    path: cert-manager
   path: helm-charts/vendor
 kind: LockConfig
