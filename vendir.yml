@@ -18,3 +18,9 @@ directories:
         version: v5.6.0
         repository:
           url: oci://ghcr.io/grafana/helm-charts
+    - path: grafana-operator-2
+      helmChart:
+        name: grafana-operator
+        version: v5.7.0
+        repository:
+          url: oci://ghcr.io/grafana/helm-charts
