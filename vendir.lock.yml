@@ -2,8 +2,8 @@ apiVersion: vendir.k14s.io/v1alpha1
 directories:
 - contents:
   - helmChart:
-      appVersion: v2.5.2
-      version: 1.5.3
+      appVersion: v2.7.1
+      version: 1.7.1
     path: aws-load-balancer-controller
   - helmChart:
       appVersion: v5.6.0
@@ -13,5 +13,12 @@ directories:
       appVersion: v1.14.4
       version: v1.14.4
     path: cert-manager
+  - git:
+      commitTitle: 'build(deps): update dependency @renovatebot/osv-offline to v1.5.3
+        (#28073)...'
+      sha: 3a9be74dfd3071e0c9c612ad42721ba40ff9e754
+      tags:
+      - 37.263.1
+    path: renovate
   path: helm-charts/vendor
 kind: LockConfig
