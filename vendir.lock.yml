@@ -13,5 +13,11 @@ directories:
       appVersion: v1.14.4
       version: v1.14.4
     path: cert-manager
+  - git:
+      commitTitle: 'feat(vendir): add vendir support (#25113)...'
+      sha: db1b0d8b66a4772eec260254fd9bf93f2b2bf0a4
+      tags:
+      - 37.264.0
+    path: renovate
   path: helm-charts/vendor
 kind: LockConfig
