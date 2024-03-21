@@ -13,5 +13,11 @@ directories:
       appVersion: v1.14.4
       version: v1.14.4
     path: cert-manager
+  - git:
+      commitTitle: 'chore(deps): lock file maintenance (#27982)...'
+      sha: 737375c26077308d505903be96daec15360884fe
+      tags:
+      - 37.252.0-8-g737375c26
+    path: renovate
   path: helm-charts/vendor
 kind: LockConfig

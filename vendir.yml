@@ -27,4 +27,4 @@ directories:
     - path: renovate
       git:
         url: https://github.com/renovatebot/renovate
-        ref: 37.263.1
+        ref: v38
