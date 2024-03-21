@@ -7,6 +7,12 @@ leaderElect: false
 # it defines which namespaces the operator should be listening for.
 # By default it's all namespaces, if you only want to listen for the same namespace as the operator is deployed to look at namespaceScope.
 watchNamespaces: ""
+# -- Sets the WATCH_NAMESPACE_SELECTOR environment variable,
+# it defines which namespaces the operator should be listening for based on label and key value pair added on namespace kind.
+# By default it's all namespaces.
+watchNamespaceSelector: ""
+# -- Determines if the target cluster is OpenShift. Additional rbac permissions for routes will be added on OpenShift
+isOpenShift: false
 # -- Additional environment variables
 env: []
 # -- grafana image, e.g. docker.io/grafana/grafana:9.1.6, overwrites the default grafana image defined in the operator
@@ -24,8 +30,12 @@ image:
   tag: ""
 # -- image pull secrets
 imagePullSecrets: []
+# -- Overrides the name of the chart.
 nameOverride: ""
+# -- Overrides the fully qualified app name.
 fullnameOverride: ""
+# -- Overrides the namespace name.
+namespaceOverride: ""
 serviceAccount:
   # -- Specifies whether a service account should be created
   create: true
@@ -62,3 +72,21 @@ nodeSelector: {}
 tolerations: []
 # -- pod affinity
 affinity: {}
+# -- Enable this to use with Prometheus Operator
+serviceMonitor:
+  # -- When set true then use a ServiceMonitor to configure scraping
+  enabled: false
+  # -- Set of labels to transfer from the Kubernetes Service onto the target
+  additionalLabels: {}
+  # -- Set how frequently Prometheus should scrape
+  interval: 1m
+  # -- Set timeout for scrape
+  scrapeTimeout: 10s
+  # -- Set path to metrics path
+  telemetryPath: /metrics
+  # -- Set of labels to transfer from the Kubernetes Service onto the target
+  targetLabels: []
+  # -- MetricRelabelConfigs to apply to samples before ingestion
+  metricRelabelings: []
+  # -- Set relabel_configs as per https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config
+  relabelings: []
